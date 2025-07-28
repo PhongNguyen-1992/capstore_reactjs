@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+
+.my-active {
+  color: #dc2626 !important; /* text-red-600 */
+  background-color: #fef2f2 !important; /* bg-red-50 */
+  padding: 6px 10px !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  box-shadow: inset 0 0 0 1px #fca5a5 !important; /* red-300 border */
+  transition: all 0.3s ease-in-out !important;
+}
