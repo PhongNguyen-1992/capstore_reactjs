@@ -1,8 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { Provider } from "react-redux";
+import listMovieSlice from "../HomeTemplete/ListMovie/slice";
+
+
 const store = configureStore({
     reducer: {
+        listMovieSlice,
         
+
     }
 })
 export default store;

@@ -1,0 +1,21 @@
+import api from "./api"
+
+export const getListMovieAPI = async (maNhom) => {
+    try {
+        const response = await api.get(`QuanLyPhim/LayDanhSachPhim?maNhom=${maNhom}`)
+        return response.data.content
+    }
+    catch (error) {
+
+    }
+}
+export const getMovieDetailsAPI = async (movieID) => {
+
+    try {
+        const response = await api.get(
+            `/QuanLyPhim/LayThongTinPhim?MaPhim=${movieID}`
+        );
+        return response.data.content
+    } catch (error) {
+    }
+};

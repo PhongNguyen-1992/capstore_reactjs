@@ -2,6 +2,8 @@ import { Clapperboard } from "lucide-react";
 import { NavLink, Outlet } from "react-router-dom";
 import Headder from "./Componnent/Headder";
 import Footer from "./Componnent/Footer";
+import LogoBrand from "./Componnent/logoBrand";
+import ListMovie from "./ListMovie";
 
 export default function Home() {
   return (
@@ -34,12 +36,8 @@ export default function Home() {
         aria-label="Sidebar"
       >
         <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
-          <img
-            src="https://www.cgv.vn/skin/frontend/cgv/default/images/cgvlogo.png"
-            alt=""
-            srcset=""
-            className="mb-5"
-          />
+        <LogoBrand/>
+          <hr />
           <ul className="space-y-2 font-medium">
             <li>
               <span className="flex items-center gap-2 text-2xl font-bold text-gray-800 transition-transform hover:scale-105">
@@ -131,7 +129,7 @@ export default function Home() {
       </aside>
       <div className="container mx-auto">
         <div className="p-4 sm:ml-64">
-          <Outlet />
+          <Outlet />          
           <Footer />
         </div>
       </div>
