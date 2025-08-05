@@ -1,9 +1,7 @@
 import { Clapperboard } from "lucide-react";
 import { NavLink, Outlet } from "react-router-dom";
-import Headder from "./Componnent/Headder";
 import Footer from "./Componnent/Footer";
 import LogoBrand from "./Componnent/logoBrand";
-import ListMovie from "./ListMovie";
 
 export default function Home() {
   return (
@@ -13,7 +11,7 @@ export default function Home() {
         data-drawer-toggle="sidebar-multi-level-sidebar"
         aria-controls="sidebar-multi-level-sidebar"
         type="button"
-        className="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        className="inline-flex bg-black items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
       >
         <span className="sr-only">Open sidebar</span>
         <svg
@@ -32,7 +30,7 @@ export default function Home() {
       </button>
       <aside
         id="sidebar-multi-level-sidebar"
-        className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+        className="fixed top-0 left-0 z-40 w-64 h-screen  transition-transform -translate-x-full sm:translate-x-0"
         aria-label="Sidebar"
       >
         <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
@@ -68,19 +66,7 @@ export default function Home() {
               >
                 🆕 Recently Updated
               </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="list-movie"
-                className={({ isActive }) =>
-                  isActive
-                    ? "my-active"
-                    : "flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                }
-              >
-                🎬 All Movies
-              </NavLink>
-            </li>
+            </li>          
 
             <li>
               <NavLink
@@ -128,7 +114,7 @@ export default function Home() {
         </div>
       </aside>
       <div className="container mx-auto">
-        <div className="p-4 sm:ml-64">
+        <div className="p-4 sm:ml-64">             
           <Outlet />          
           <Footer />
         </div>

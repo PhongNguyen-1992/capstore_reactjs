@@ -1,0 +1,12 @@
+import api from "./api"
+
+export const getBannerAPI = async () => {
+    try {
+        const response = await api.get(`QuanLyPhim/LayDanhSachBanner`)
+        return response.data.content
+    }
+    catch (error) {
+
+    }
+}
+

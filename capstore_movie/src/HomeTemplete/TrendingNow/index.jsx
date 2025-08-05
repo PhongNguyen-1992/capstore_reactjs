@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import Headder from "../Componnent/Headder";
-import ListMovie from "../ListMovie";
+import ListMovie from "../ListMovie/ListMovie";
+import ListBanner from "../Componnent/Carausel";
 
 export default function TrendingNow() {
   return (
@@ -42,7 +43,8 @@ export default function TrendingNow() {
         </li>
       </ol>
     </nav>
-    <Headder/>
+    <Headder className="fixed  z-50 shadow-md"/>
+    <ListBanner/>
     <ListMovie/>
     </div>
   );

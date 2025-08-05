@@ -2,8 +2,8 @@ import { Route } from "react-router-dom";
 import Home from "../HomeTemplete/_index";
 import TrendingNow from "../HomeTemplete/TrendingNow";
 import RecentlyUpdate from "../HomeTemplete/RecentlyUpdate";
-import ListMovie from "../HomeTemplete/ListMovie";
 import MovieDetail from "../HomeTemplete/DetailMovie.jsx";
+
 
 
 const routers = [
@@ -19,11 +19,7 @@ const routers = [
        {
         path: "recently-update",
         element:RecentlyUpdate,
-      },
-      {
-        path: "list-movie",
-        element:ListMovie,
-      },  
+      },      
       {
         path: "movie-detail/:movieID",
         element: MovieDetail,
